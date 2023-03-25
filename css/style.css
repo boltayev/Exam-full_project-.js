@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&family=Caveat:wght@700&family=DM+Sans:wght@400;500;700&family=Epilogue:wght@500;700&family=Fuzzy+Bubbles:wght@400;700&family=Inter:wght@300;500;700&family=Kumbh+Sans:wght@400;700&family=Noto+Sans:wght@400;600&family=Overpass:wght@400;700&family=Pacifico&family=Plus+Jakarta+Sans:wght@500;700&family=Poppins:ital,wght@0,400;0,700;1,400;1,500;1,600&family=Red+Hat+Display:wght@500;900&family=Red+Hat+Text:wght@400;700&family=Roboto:wght@700&family=Silkscreen&family=Space+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: "Kumbh Sans";
+  margin-right: 0px;
+}
+body header .container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+body header .container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  margin-top: 31px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #E4E9F2;
+}
+body header .container nav .left_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+body header .container nav .left_nav .burger img {
+  display: none;
+}
+body header .container nav .left_nav .logo img {
+  width: 137px;
+  height: 20px;
+  margin-right: 56px;
+}
+body header .container nav .left_nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+}
+body header .container nav .left_nav ul li {
+  margin-bottom: 41px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  /* identical to box height, or 173% */
+  color: #69707D;
+}
+body header .container nav .left_nav ul li:hover {
+  border-bottom: 4px solid red;
+  cursor: pointer;
+}
+body header .container nav .right_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 46px;
+     -moz-column-gap: 46px;
+          column-gap: 46px;
+}
+body header .container nav .right_nav .man_img img {
+  width: 50px;
+  height: 50px;
+  margin-top: -15px;
+}
+body header .container nav .right_nav .man_img:hover {
+  cursor: pointer;
+}
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 125px;
+  width: 1110px;
+  margin: 0 auto;
+  padding: 50px 40px;
+}
+body main .img_block .boots {
+  width: 445px;
+  height: 445px;
+  margin-bottom: 32px;
+  display: none;
+}
+body main .img_block .full img {
+  width: 100%;
+  height: 100%;
+}
+body main .img_block .boots_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body main .img_block .activite {
+  display: block;
+}
+body main .text_block {
+  margin-top: 58px;
+}
+body main .text_block .comp_name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #FF7E1B;
+  margin-bottom: 27px;
+}
+body main .text_block h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 48px;
+  color: #1D2026;
+  margin-bottom: 32px;
+}
+body main .text_block p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #69707D;
+  margin-bottom: 28px;
+}
+body main .text_block .time_sena {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 30px;
+}
+body main .text_block .time_sena .product_sena {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+body main .text_block .time_sena .product_sena .discount .sena {
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 35px;
+  color: #1D2026;
+  margin-right: 25px;
+  margin-bottom: 10px;
+}
+body main .text_block .time_sena .product_sena .discount .spam {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #B6BCC8;
+  margin-bottom: 36px;
+}
+body main .text_block .time_sena .product_sena .parcent {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FF7E1B;
+  background: #FFEEE2;
+  margin-top: 9px;
+  width: 40px;
+  height: 21px;
+  border-radius: 3px;
+  text-align: center;
+}
+body main .text_block .time_sena .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  color: #FF7E1B;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 14px;
+  margin-bottom: 80px;
+  gap: 10px;
+}
+body main .text_block .time_sena .time .full_time {
+  background: #FFEEE2;
+  padding: 0px 9px;
+  border-radius: 3px;
+}
+body main .text_block .add_to_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+body main .text_block .add_to_card .count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #FF7E1B;
+  background: #FFEEE2;
+  margin-right: 16px;
+  border-radius: 8px;
+  padding: 0px 56px;
+}
+body main .text_block .add_to_card .count .num {
+  color: #000;
+}
+body main .text_block .add_to_card .add_inform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 76px;
+  background: #FF7E1B;
+  border-radius: 10px;
+}
+body main .text_block .add_to_card .add_inform p {
+  margin-left: 15px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFFFFF;
+  margin-top: -3px;
+}
+body .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f3c9a9;
+  width: 250px;
+  height: 900px;
+  padding: 25px 25px;
+}
+body .modal .delet {
+  margin-bottom: 53px;
+}
+body .modal ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+body .modal ul li {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #1D2026;
+}
+body .hidden {
+  display: none;
+}
+body .card {
+  width: 360px;
+  height: 256px;
+  background: #fff;
+  -webkit-box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.503143);
+          box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.503143);
+  border-radius: 10px;
+  position: fixed;
+  top: 10%;
+  right: 10%;
+}
+body .card .text_card {
+  color: #1D2026;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 24px 24px;
+}
+body .card .hr {
+  width: 100%;
+  height: 1px;
+  background: #E4E9F2;
+}
+body .card .sell p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: #69707D;
+}
+body .hidden {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  body header {
+    max-width: 100%;
+  }
+  body header .container {
+    max-width: 100%;
+  }
+  body header .container nav {
+    padding: 0px 20px;
+    border-bottom: 0;
+  }
+  body header .container nav .left_nav .burger img {
+    display: block;
+    margin-right: 16px;
+  }
+  body header .container nav .left_nav .logo {
+    margin-top: -4px;
+  }
+  body header .container nav .left_nav ul li {
+    display: none;
+  }
+  body main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100%;
+    padding: 0;
+  }
+  body main .img_block .boots {
+    margin-bottom: -150px;
+    width: 375px;
+    height: 300px;
+  }
+  body main .img_block .boots img {
+    width: 375px;
+    height: 300px;
+  }
+  body main .img_block .boots_img {
+    display: none;
+  }
+  body main .text_block {
+    padding: 10px 24px;
+  }
+  body main .text_block .comp_name {
+    font-size: 12px;
+    margin-top: -23px;
+  }
+  body main .text_block h1 {
+    margin-top: -10px;
+    font-size: 28px;
+    line-height: 32px;
+  }
+  body main .text_block p {
+    font-size: 15px;
+    line-height: 25px;
+    color: red;
+    margin-top: -15px;
+  }
+  body main .text_block .time_sena {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  body main .text_block .time_sena .product_sena {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body main .text_block .time_sena .product_sena .discount {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body main .text_block .time_sena .time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: rgb(236, 226, 226);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: -1px;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+  body main .text_block .time_sena .time .full_time {
+    background: red;
+    padding: 2px 9px;
+    border-radius: 3px;
+  }
+  body main .text_block .add_to_card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .text_block .add_to_card .count {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 16px;
+    margin-right: 0;
+    padding: 12px 20px;
+  }
+  body .card {
+    position: fixed;
+    top: 14.5%;
+    left: 2%;
+  }
+}/*# sourceMappingURL=style.css.map */
