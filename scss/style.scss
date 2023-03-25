@@ -385,8 +385,10 @@ body{
   @media only screen and (max-width: 768px) {
 
     header{
+      border: 1px solid rgb(26, 21, 21);
       max-width: 100%;
       .container{
+        border: 1px solid rgb(26, 21, 21);
         max-width: 100%;
           nav{
             padding: 0px 20px;
@@ -423,6 +425,7 @@ body{
 
 
     main{
+      // border: 1px solid red;
       display: flex;
       flex-direction: column;
       max-width: 100%;
