@@ -67,22 +67,26 @@ body header .container nav .right_nav {
      -moz-column-gap: 46px;
           column-gap: 46px;
 }
+body header .container nav .right_nav .market {
+  cursor: pointer;
+}
 body header .container nav .right_nav .man_img img {
   width: 50px;
   height: 50px;
   margin-top: -15px;
 }
 body header .container nav .right_nav .man_img:hover {
-  cursor: pointer;
+  border: 1px solid red;
 }
 body main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 125px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 1110px;
   margin: 0 auto;
-  padding: 50px 40px;
 }
 body main .img_block .boots {
   width: 445px;
@@ -101,6 +105,18 @@ body main .img_block .boots_img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+body main .img_block .boots_img .shoes {
+  width: 88px;
+  height: 88px;
+  cursor: pointer;
+}
+body main .img_block .boots_img .shoes img {
+  width: 100%;
+  height: 100%;
+}
+body main .img_block .boots_img .shoes:hover {
+  opacity: 0.5;
 }
 body main .img_block .activite {
   display: block;
@@ -146,6 +162,15 @@ body main .text_block .time_sena .product_sena {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+body main .text_block .time_sena .product_sena .discount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 body main .text_block .time_sena .product_sena .discount .sena {
   font-family: "Kumbh Sans";
@@ -157,17 +182,7 @@ body main .text_block .time_sena .product_sena .discount .sena {
   margin-right: 25px;
   margin-bottom: 10px;
 }
-body main .text_block .time_sena .product_sena .discount .spam {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 26px;
-  -webkit-text-decoration-line: line-through;
-          text-decoration-line: line-through;
-  color: #B6BCC8;
-  margin-bottom: 36px;
-}
-body main .text_block .time_sena .product_sena .parcent {
+body main .text_block .time_sena .product_sena .discount .parcent {
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -179,6 +194,16 @@ body main .text_block .time_sena .product_sena .parcent {
   height: 21px;
   border-radius: 3px;
   text-align: center;
+}
+body main .text_block .time_sena .product_sena .spam {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #B6BCC8;
+  margin-bottom: 36px;
 }
 body main .text_block .time_sena .time {
   display: -webkit-box;
@@ -202,6 +227,7 @@ body main .text_block .add_to_card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 16px;
 }
 body main .text_block .add_to_card .count {
   display: -webkit-box;
@@ -210,36 +236,56 @@ body main .text_block .add_to_card .count {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  color: #FF7E1B;
-  background: #FFEEE2;
-  margin-right: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 45px;
+  background: #F6F8FD;
   border-radius: 8px;
-  padding: 0px 56px;
+  padding: 0px 15px;
 }
-body main .text_block .add_to_card .count .num {
-  color: #000;
+body main .text_block .add_to_card .count .sum {
+  color: #1D2026;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+}
+body main .text_block .add_to_card .count .cursor {
+  cursor: pointer;
 }
 body main .text_block .add_to_card .add_inform {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0px 76px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 22px 72px;
+  gap: 15px;
   background: #FF7E1B;
+  -webkit-box-shadow: 0px 20px 50px -20px #FF7E1B;
+          box-shadow: 0px 20px 50px -20px #FF7E1B;
   border-radius: 10px;
+  cursor: pointer;
 }
-body main .text_block .add_to_card .add_inform p {
-  margin-left: 15px;
+body main .text_block .add_to_card .add_inform:hover {
+  background: #FFAB6A;
+}
+body main .text_block .add_to_card .add_inform .p {
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  color: #FFFFFF;
-  margin-top: -3px;
+  color: #fff;
 }
 body .modal {
   position: fixed;
   top: 0;
   left: 0;
-  background: #f3c9a9;
+  background: #fff;
   width: 250px;
   height: 900px;
   padding: 25px 25px;
@@ -289,6 +335,68 @@ body .card .hr {
   height: 1px;
   background: #E4E9F2;
 }
+body .card .card_active {
+  padding: 25px 24px;
+}
+body .card .card_active .into_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 24px;
+  gap: 15px;
+}
+body .card .card_active .into_card .full_count p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #1c4ca5;
+}
+body .card .card_active .into_card .full_count .full_boots_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3px;
+}
+body .card .card_active .into_card .full_count .full_boots_price .boots_sell {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #69707D;
+}
+body .card .card_active .into_card .full_count .full_boots_price .boots_price {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1D2026;
+}
+body .card .card_active .delete {
+  margin-top: 15px;
+}
+body .card .checkout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 312px;
+  height: 56px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFFFFF;
+  background: #FF7E1B;
+  border-radius: 10px;
+  text-align: center;
+}
+body .card .sell {
+  margin-top: 77px;
+  display: none;
+}
 body .card .sell p {
   font-style: normal;
   font-weight: 700;
@@ -296,21 +404,85 @@ body .card .sell p {
   text-align: center;
   color: #69707D;
 }
+body .card .jjj {
+  display: block;
+}
+body .card .card_hidden_delet {
+  display: none;
+}
 body .hidden {
   display: none;
 }
+body .count_shoos_sum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 19px;
+  height: 13px;
+  background: #FF7E1B;
+  border-radius: 6.5px;
+  position: fixed;
+  top: 22px;
+  left: 76.5%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  color: #FFFFFF;
+}
+body .show_hidden {
+  display: none;
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  body header {
+    background: #FF7E1B;
+  }
+  body main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 60px;
+    padding: 10px 20px;
+  }
+  body main .img_block .boots {
+    width: 400px;
+    height: 400px;
+  }
+  body main .text_block .add_to_card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .text_block .add_to_card .count {
+    width: 300px;
+  }
+  body main .text_block .add_to_card .add_inform {
+    width: 300px;
+  }
+}
 @media only screen and (max-width: 768px) {
   body header {
-    border: 1px solid rgb(26, 21, 21);
     max-width: 100%;
   }
   body header .container {
-    border: 1px solid rgb(26, 21, 21);
     max-width: 100%;
   }
   body header .container nav {
     padding: 0px 20px;
     border-bottom: 0;
+    border: 1px solid red;
   }
   body header .container nav .left_nav .burger img {
     display: block;
@@ -322,6 +494,12 @@ body .hidden {
   body header .container nav .left_nav ul li {
     display: none;
   }
+  body header .container nav .right_nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 28px;
+  }
   body main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -331,12 +509,13 @@ body .hidden {
         -ms-flex-direction: column;
             flex-direction: column;
     max-width: 100%;
-    padding: 0;
+    padding: 0px;
   }
   body main .img_block .boots {
     margin-bottom: -150px;
     width: 375px;
     height: 300px;
+    margin: 0 auto;
   }
   body main .img_block .boots img {
     width: 375px;
@@ -371,6 +550,7 @@ body .hidden {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    padding-right: 0;
   }
   body main .text_block .time_sena .product_sena {
     display: -webkit-box;
@@ -384,6 +564,11 @@ body .hidden {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  body main .text_block .time_sena .product_sena .spam {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
   }
   body main .text_block .time_sena .time {
     display: -webkit-box;
@@ -421,6 +606,9 @@ body .hidden {
     margin-bottom: 16px;
     margin-right: 0;
     padding: 12px 20px;
+  }
+  body main .text_block .add_to_card .add_inform {
+    margin-bottom: 20px;
   }
   body .card {
     position: fixed;

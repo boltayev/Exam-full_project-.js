@@ -41,8 +41,8 @@ function e (){
 	sumValue--
 	sum.innerText = sumValue
 
-	if(sumValue === -1){
-		enc.removeEventListener('click', (e))
+	if(sumValue === 0){
+		dec.removeEventListener('click', (e))
 	}
 
 }
@@ -52,8 +52,8 @@ dec.addEventListener('click', p)
 function p (){
 	sumValue++
 	sum.innerText = sumValue
-	if(sumValue === 50){
-		dec.removeEventListener('click', (p))
+	if(sumValue === 3){
+		enc.removeEventListener('click', (p))
 	}
 }
 
@@ -99,12 +99,16 @@ setInterval(() =>{
 
 const card = document.querySelector('.card')
 const shop = document.querySelector('#online_shop')
-console.log(card);
-console.log(shop);
+const show_count = document.querySelector('.count_shoos_sum')
+
+// console.log(card);
+// console.log(shop);
 
 shop.addEventListener('click', () =>{
     card.classList.remove('hidden')
     ss.classList.remove('hidden')
+    show_count.classList.add('show_hidden')
+
 })
 
 
@@ -145,15 +149,110 @@ li.forEach((tab, i) =>{
 })
 
 
+///////------- into_card delete -------///////
+
+
+const into_card = document.querySelector('.into_card')
+const into_card_delet = document.querySelector('.delete')
+const card_perent = document.querySelector('.card')
+const hh = document.querySelector('.card_active')
+
+// console.log(card_perent);
+// console.log(into_card_delet);
+
+
+into_card_delet.addEventListener('click', () =>{
+    card_perent.classList.remove('card_hidden_delet')
+    // console.log('done');
+
+})
+
+
+into_card_delet.addEventListener('click', () =>{
+    hh.classList.remove('card_hidden_delet')
+    card_perent.classList.remove('sell')
+    console.log('done');
+
+})
+
+
+
+//// ----- Add to card--------////////
+
+const add_to_card = document.querySelector('.p')
+const count_sum = document.querySelector('.sum')
+const count_send = document.querySelector('.boots_price')
+
+// console.log(add_to_card);
+console.log(count_sum);
+
+add_to_card.addEventListener('click', ()=>{
+
+    console.log('done');
+
+
+    if(sumValue === 0){
+    console.log('your card is empty')
+  }
+  else{
+    let result = 125   * sumValue
+    count_send.innerText =  sumValue + ' ' + '$' + result
+  }
+    
+})
+
+
+    // show_count.classList.add('show_hidden')
+
+
+add_to_card.addEventListener('click',()=>{
+
+    show_count.classList.remove('show_hidden')
+    hh.classList.remove('card_hidden_delet')
+    show_count.innerText = sumValue
+
+    card.classList.remove('hidden')
+    ss.classList.remove('hidden')
+    show_count.classList.add('show_hidden')
+
+
+    console.log('done');
+
+})
 
 
 
 
 
+///-------slider--------////
 
+let slidesw = document.querySelectorAll('.slider-inner .slide')
+let slidesInner = document.querySelector('.slider-inner')
+let prevBtn = document.querySelector('.slide-prev')
+let nextBtn = document.querySelector('.slide-next')
 
+//Carousel Slider
+let slideCount = 0
 
+prevBtn.addEventListener('click', () => {
+	if(slideCount <= 0){
+		slideCount = slidesw.length - 1
+	}else{
+		slideCount--
+	}
 
+	slidesInner.style.transform = `translateX(-${slideCount * 900}px)`
+})
+
+nextBtn.addEventListener('click', () => {
+	if(slideCount < slidesw.length - 1){
+		slideCount++
+	}else{
+		slideCount = 0
+	}
+	
+	slidesInner.style.transform = `translateX(-${slideCount * 900}px)`
+})
 
 
 
