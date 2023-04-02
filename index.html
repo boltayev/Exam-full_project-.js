@@ -25,7 +25,10 @@
                     </ul>
                 </div>
                 <div class="right_nav">
-                    <div class="market"  id="online_shop"><img src="img/bag.png" alt=""></div>
+                    <div class="market"  id="online_shop">
+                        <img src="img/bag.png" alt="">
+                        <div class="count_shoos_sum  show_hidden"></div>
+                    </div>
                     <div class="man_img"><img src="img/man.png" alt=""></div>
                 </div>
                 
@@ -35,7 +38,7 @@
 
     <main>
         <div class="img_block">
-            <div class="boots activite"><img src="img/boots.jpg" alt="boots"></div>
+            <div class="boots  activite"><img src="img/boots.jpg" alt="boots"></div>
             <div class="boots full"><img src="img/big_two.png" alt="boots"></div>
             <div class="boots full"><img src="img/big_three.png" alt="boots"></div>
             <div class="boots full"><img src="img/big_four.png" alt="boots"></div>
@@ -47,45 +50,99 @@
             </div>
         </div>
 
+        <div class="slider__modal hidden ">
+                    <div class="close-btn">
+                        <img src="img/slide_delet_white.svg" alt="close btn">
+                    </div>
+                    <div class="slider">
+                        <div class='slide-prev'><img src="img/tab_left.png" alt="icon"></div>
+                        <div class="slider__img">
+                            <div class="slider-inner">
+                                <div class="slide"><img src="img/slider_img_2.png" alt="img"></div>
+                                <div class="slide"><img src="img/slider_img_2.png" alt="img"></div>
+                                <div class="slide"><img src="img/slider_img_2.png" alt="img"></div>
+                                <div class="slide"><img src="img/slider_img_2.png" alt="img"></div>
+                            </div>
+                        </div>
+                        <div class='slide-next'><img src="img/tab_right.png" alt="icon"></div>
+                    </div>
+                    <div id='slide-parent' class='modal-img'>
+                        <img class='slide-link' src="img/slider_tab_1.png" alt="snek-img1">
+                        <img class='slide-link' src="img/slider_tab_1.png" alt="snek-img2">
+                        <img class='slide-link' src="img/slider_tab_1.png" alt="snek-img3">
+                        <img class='slide-link' src="img/slider_tab_1.png" alt="snek-img4">
+                    </div>
+                </div>
+
+
+
+                <!-- <div class="mobile">
+                    <div class='slide-prev-mobile'><img src="img/tab_left.png" alt="icon"></div>
+                    <div class="slider-mobile">
+                        <div class="slide"><img src="img/slider_img_2.png" alt="img"></div>
+                        <div class="slide"><img src="img/slider_img_2.png" alt="img"></div>
+                        <div class="slide"><img src="img/slider_img_2.png" alt="img"></div>
+                        <div class="slide"><img src="img/slider_img_2.png" alt="img"></div>
+                    </div>
+                    <div class='slide-next-mobile'><img src="img/tab_right.png" alt="icon"></div>
+                </div> -->
+
+
         <div class="text_block">
             <div class="comp_name">Sneaker Company</div>
             <h1>Fall Limited Edition Sneakers</h1>
             <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-            
-            <div class="time_sena">
-                <div class="product_sena">
-                    <div class="discount">
-                        <div class="sena">$125.00</div>
-                        <div class="parcent">50%</div>
+
+            <div class="parent">
+                <div class="time_sena">
+                    <div class="product_sena">
+                        <div class="discount">
+                            <div class="sena">$125.00</div>
+                            <div class="parcent">50%</div>
+                        </div>
+
+                        <div class="spam">$250.00</div>
                     </div>
 
-                    <div class="spam">$287.</div>
+                    <div class="time">
+                        <div class="day full_time"></div>
+                        <span>
+                            <div class="top"></div>
+                            <div class="bottom"></div>
+                        </span>
+                        <div class="hour full_time"></div>
+                        <span>
+                            <div class="top"></div>
+                            <div class="bottom"></div>
+                        </span>
+                        <div class="minut full_time"></div>
+                        <span>
+                            <div class="top"></div>
+                            <div class="bottom"></div>
+                        </span>
+                        <div class="secunt full_time"></div>
+                    </div>
                 </div>
 
-                <div class="time">
-                    <div class="day full_time">10</div>
-                    <div class="hour full_time">93</div>
-                    <div class="minut full_time">23</div>
-                    <div class="secunt full_time">12</div>
+                <div class="add_to_card">
+                    <div class="count">
+                        <div class="enc cursor">-</div>
+                        <div class="sum ">0</div>
+                        <div class="dec cursor">+</div>
+                    </div>
+                    <div class="add_inform">
+                        <div><img src="img/shop.png" alt="shop"></div>
+                        <div class="p">Add to cart</div>
+                    </div>
                 </div>
             </div>
 
-            <div class="add_to_card">
-                <div class="count">
-                    <div class="enc cursor"><img src="img/minus.png" alt=""></div>
-                    <div class="sum ">0</div>
-                    <div class="dec cursor"><img src="img/plus.png" alt=""></div>
-                </div>
-                <div class="add_inform">
-                    <div><img src="img/shop.png" alt="shop"></div>
-                    <div class="p">Add to cart</div>
-                </div>
-            </div>
         </div>
     </main>
 
     <section class="modal hidden">
-        <div class="delet">X</div>
+        <!-- <button class="delet"><img src="img/delet_s" alt=""></button> -->
+        <img class="delet" src="img/delet_svg.svg" alt="delet">
         <ul>
             <li>Collections</li>
             <li>Men</li>
@@ -119,34 +176,34 @@
         </div>
     </section>
 
-    <div class="count_shoos_sum  show_hidden"></div>
 
     <!-- <section class="slider_block">
+        <div class="tab_left"><img src="img/tab_left.png" alt="tab"></div>
         <div class="slider_parent">
             <div class="slider_inner">
-                <div class="slider "><img src="img/slider_img_2.png" alt="shoos"></div>
-                <div class="slider"><img src="img/slider_img_1.png" alt="shoos"></div>
-                <div class="slider"><img src="img/slider_img_3.png" alt="shoos"></div>
+                <div class="slider active "><img src="img/slider_img_2.png" alt="shoos"></div>
+                <div class="slider"><img src="img/slider_img_2.png" alt="shoos"></div>
+                <div class="slider"><img src="img/slider_img_2.png" alt="shoos"></div>
             </div>
-
-            <div class="tab_left"><img src="img/tab_left.png" alt="tab"></div>
-            <div class="tab_right"><img src="img/tab_right.png" alt="tab"></div>
         </div>
+        <div class="tab_right"><img src="img/tab_right.png" alt="tab"></div>
 
-        <div class="slider_tab">
-            <div class="tab"><img src="img/slider_tab_1.png" alt="shoos"></div>
-            <div class="tab"><img src="img/slider_tab_1.png" alt="shoos"></div>
-            <div class="tab"><img src="img/slider_tab_1.png" alt="shoos"></div>
-            <div class="tab"><img src="img/slider_tab_1.png" alt="shoos"></div>
-        </div>
+        
     </section> -->
 
+     <!-- <div class="mobile">
+                    <div class='slide-prev-mobile'><img src="img/tab_left.png" alt="icon"></div>
+                    <div class="slider-mobile">
+                        <div class="slide"><img src="img/slider_img_2.png" alt="img"></div>
+                        <div class="slide"><img src="img/slider_img_2.png" alt="img"></div>
+                        <div class="slide"><img src="img/slider_img_2.png" alt="img"></div>
+                        <div class="slide"><img src="img/slider_img_2.png" alt="img"></div>
+                    </div>
+                    <div class='slide-next-mobile'><img src="img/tab_right.png" alt="icon"></div>
+                </div> -->
 
-
-
-    
-    
     <div class="other hidden" id="remove"></div>
+    <div class="overly hidden"></div>
 
     <script src="/js/app.js"></script>
     

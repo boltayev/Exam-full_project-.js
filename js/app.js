@@ -41,7 +41,7 @@ function e (){
 	sumValue--
 	sum.innerText = sumValue
 
-	if(sumValue === 0){
+	if(sumValue <= 0){
 		dec.removeEventListener('click', (e))
 	}
 
@@ -52,7 +52,7 @@ dec.addEventListener('click', p)
 function p (){
 	sumValue++
 	sum.innerText = sumValue
-	if(sumValue === 3){
+	if(sumValue === 5){
 		enc.removeEventListener('click', (p))
 	}
 }
@@ -68,30 +68,61 @@ const second = document.querySelector('.secunt')
 
 
 
+function showTime(){
 
-function sayHello() {
-    let dd = Date.parse(new Date())/1000
+        nextYear = new Date('2023-04-05'),
+        currentTime = new Date(),
+        diff = nextYear - currentTime,
+        daysLeft = Math.floor(diff / 1000 / 60 / 60 / 24),
+        hoursLeft = Math.floor(diff / 1000 / 60 / 60) % 24,  
+        minutesLeft = Math.floor(diff / 1000 / 60) % 60,  
+        secondsLeft = Math.floor(diff / 1000) % 60
+    
+    if(diff > 0) {
+        day.innerText = daysLeft;
+        hour.innerText = hoursLeft < 10 ? '0' + hoursLeft : hoursLeft;
+        minut.innerText = minutesLeft < 10 ? '0' + minutesLeft : minutesLeft;
+        second.innerText = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft;
+    }else {
+        day.innerText = '00'
+        hour.innerText = '00'
+        minut.innerText = '00'
+        second.innerText = '00'
+    }    
 }
 
-setInterval(() =>{
-    // const time = document.querySelector('.time')
-    let date = new Date()
-    let hours = date.getHours()
-    let minuts = date.getMinutes();
-    let seconds = date.getSeconds();
+setInterval(showTime, 1000)
 
-    if(minuts < 10){
-        minuts = '0' + minuts
-    }
-    if(seconds< 10){
-        seconds = '0' + seconds
-    }
-    hour.textContent = hours
-    minut.textContent = minuts
-    second.textContent = seconds
-    // time.textContent =  `${hours} : ${minuts} : ${seconds } PM` 
-    sayHello()
-},1000)
+showTime()
+
+
+
+
+// function sayHello() {
+//     let dd = Date.parse(new Date())/1000
+// }
+
+// setInterval(() =>{
+//     // const time = document.querySelector('.time')
+//     let date = new Date()
+//     // let days = data.getDays()
+//     let hours = date.getHours()
+//     let minuts = date.getMinutes();
+//     let seconds = date.getSeconds();
+
+//     if(minuts < 10){
+//         minuts = '0' + minuts
+//     }
+//     if(seconds< 10){
+//         seconds = '0' + seconds
+//     }
+//     day.textContent = days
+//     hour.textContent = hours
+//     minut.textContent = minuts
+//     second.textContent = seconds
+//     // time.textContent =  `${minuts} : ${hours} : ${minuts} : ${seconds } PM` 
+//     sayHello()
+// },1000)
 
 
 
@@ -105,11 +136,24 @@ const show_count = document.querySelector('.count_shoos_sum')
 // console.log(shop);
 
 shop.addEventListener('click', () =>{
-    card.classList.remove('hidden')
+    card.classList.toggle('hidden')
     ss.classList.remove('hidden')
     show_count.classList.add('show_hidden')
 
 })
+
+
+
+//     add_to_card.addEventListener('click', () =>{
+//         if(sum.innerText >0){
+//         card.classList.toggle('hidden')
+//         ss.classList.remove('hidden')
+//         show_count.classList.add('show_hidden')
+
+//         }
+
+// })
+
 
 
 
@@ -161,16 +205,15 @@ const hh = document.querySelector('.card_active')
 // console.log(into_card_delet);
 
 
-into_card_delet.addEventListener('click', () =>{
-    card_perent.classList.remove('card_hidden_delet')
-    // console.log('done');
+// into_card_delet.addEventListener('click', () =>{
+//     card_perent.classList.remove('card_hidden_delet')
+//     console.log('done');
 
-})
+// })
 
 
 into_card_delet.addEventListener('click', () =>{
     hh.classList.remove('card_hidden_delet')
-    card_perent.classList.remove('sell')
     console.log('done');
 
 })
@@ -202,8 +245,9 @@ add_to_card.addEventListener('click', ()=>{
 })
 
 
-    // show_count.classList.add('show_hidden')
 
+//// ------- add_to_card ------///////
+const seell = document.querySelector('.sell')
 
 add_to_card.addEventListener('click',()=>{
 
@@ -213,7 +257,9 @@ add_to_card.addEventListener('click',()=>{
 
     card.classList.remove('hidden')
     ss.classList.remove('hidden')
-    show_count.classList.add('show_hidden')
+    // show_count.classList.add('show_hidden')
+    seell.classList.remove('jjj')
+
 
 
     console.log('done');
@@ -241,7 +287,7 @@ prevBtn.addEventListener('click', () => {
 		slideCount--
 	}
 
-	slidesInner.style.transform = `translateX(-${slideCount * 900}px)`
+	slidesInner.style.transform = `translateX(-${slideCount * 550}px)`
 })
 
 nextBtn.addEventListener('click', () => {
@@ -251,18 +297,73 @@ nextBtn.addEventListener('click', () => {
 		slideCount = 0
 	}
 	
-	slidesInner.style.transform = `translateX(-${slideCount * 900}px)`
+	slidesInner.style.transform = `translateX(-${slideCount * 550}px)`
 })
 
 
 
+let boots = document.querySelectorAll('.boots')
+let sliderModal = document.querySelector('.slider__modal')
+let overly = document.querySelector('.overly')
+
+boots.forEach((item) => {
+    item.addEventListener('click', () => {
+        sliderModal.classList.remove('hidden')
+        overly.classList.remove('hidden')
+    })
+})
 
 
+overly.addEventListener('click', () => {
+    sliderModal.classList.add('hidden')
+    overly.classList.add('hidden')
+})
 
 
+//mobilne slider----
+
+// Fade Slider
+// let slides = document.querySelectorAll('.slider-wrapper .slide')
+// let prevBtn = document.querySelector('.slide-prev')
+// let nextBtn = document.querySelector('.slide-next')
+// let slideCount = 0
+
+// prevBtn.addEventListener('click', () => {
+//   if(slideCount <= 0){
+//     slideCount = slides.length - 1
+//   }else{
+//     slideCount--
+//   }
+
+//   hideSlide()
+//   showSlide(slideCount)
+//   console.log('prev')
+// })
+
+// nextBtn.addEventListener('click', () => {
+//   if(slideCount >= slides.length - 1){
+//     slideCount = 0
+//   }else{
+//     slideCount++
+//   }
+  
+//   hideSlide()
+//   showSlide(slideCount)
+// })
 
 
+// function showSlide(i = 0){
+//   slides[i].classList.add('active')
+// }
 
+// function hideSlide(){
+//   slides.forEach((slide) => {
+//     slide.classList.remove('active')
+//   })
+// }
+
+// hideSlide()
+// showSlide()
 
 
 
