@@ -472,9 +472,6 @@ main .text_block .add_to_card .add_inform .p {
 .card .jjj {
   display: block;
 }
-.card .card_hidden_delet {
-  display: none;
-}
 
 .hidden {
   display: none;
@@ -508,15 +505,12 @@ main .text_block .add_to_card .add_inform .p {
 }
 
 .slider__modal {
-  display: none;
   position: absolute;
   width: 550px;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   z-index: 9999;
-  top: 90px;
-  margin-left: 30%;
 }
 .slider__modal .close-btn {
   height: 44px;
@@ -633,7 +627,7 @@ main .text_block .add_to_card .add_inform .p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-left: 275px;
+  margin-left: -125px;
 }
 .slider__modal:hover {
   color: red;
@@ -717,4 +711,14 @@ main .text_block .add_to_card .add_inform .p {
 }
 .slider__modal .modal-img img:hover {
   opacity: 0.4;
+}
+
+.overly {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #000000;
+  opacity: 0.75;
 }/*# sourceMappingURL=style.css.map */

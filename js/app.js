@@ -29,33 +29,37 @@ ss.addEventListener('click', () =>{
 
 ///count---------////---------////----------///---------
 
-const sum = document.querySelector('.sum')
 const enc = document.querySelector('.enc')
 const dec = document.querySelector('.dec')
+const sum = document.querySelector('.sum')
 
 let sumValue = 0
 sum.innerText = sumValue
 
-enc.addEventListener('click' , (e))
-function e (){
-	sumValue--
-	sum.innerText = sumValue
 
-	if(sumValue <= 0){
-		dec.removeEventListener('click', (e))
-	}
+function decrement(){
+  if(sumValue === 0){
 
+    sumValue = 0
+  }
+  else{
+    sumValue--
+  }
+  sum.innerText = sumValue
 }
 
-dec.addEventListener('click', p)
+dec.addEventListener('click', decrement)
 
-function p (){
-	sumValue++
-	sum.innerText = sumValue
-	if(sumValue === 5){
-		enc.removeEventListener('click', (p))
-	}
+function increment(){
+  sumValue++
+  sum.innerText = sumValue
+  if(sumValue === 10){
+    enc.removeEventListener("click", increment)
+  }
 }
+
+enc.addEventListener('click', increment)
+
 
 
 //---time ----/////  /////// ////// /////
@@ -276,6 +280,7 @@ let slidesw = document.querySelectorAll('.slider-inner .slide')
 let slidesInner = document.querySelector('.slider-inner')
 let prevBtn = document.querySelector('.slide-prev')
 let nextBtn = document.querySelector('.slide-next')
+let close_Btn= document.querySelector('.close-btn')
 
 //Carousel Slider
 let slideCount = 0
@@ -317,6 +322,16 @@ boots.forEach((item) => {
 overly.addEventListener('click', () => {
     sliderModal.classList.add('hidden')
     overly.classList.add('hidden')
+})
+
+close_Btn.addEventListener('click',() =>{
+    // overly.classList.remove('hidden')
+    sliderModal.classList.add('hidden')
+    overly.classList.add('hidden')
+
+
+    console.log('lddkd');
+
 })
 
 

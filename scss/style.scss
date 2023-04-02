@@ -508,6 +508,7 @@ body{
         }
 
 
+
         .delete{
           // margin-left: 10px;
           margin-top: 15px;
@@ -549,9 +550,9 @@ body{
       display:block;
     }
 
-    .card_hidden_delet{
-      display:none;
-    }
+    // .card_hidden_delet{
+    //   display:none;
+    // }
 
 
 
@@ -586,13 +587,13 @@ body{
 
   ///slider=    ------   slder    
   .slider__modal{
-    display: none;
+    // display: none;
 					position: absolute;
 					width: 550px;
 					height: max-content;
 					z-index: 9999;
-					top: 90px;
-          margin-left: 30%;
+					// top: 90px;
+          // margin-left: 30%;
 					.close-btn{
 						height: 44px;
 						width: 100%;
@@ -671,7 +672,7 @@ body{
 						display: flex;
 						justify-content: flex-end;
 						align-items: flex-start;
-						margin-left: 275px;
+						margin-left: -125px;
 
 					}&:hover{
             color: red;
@@ -733,6 +734,18 @@ body{
 						}
 					}
 				}
+
+
+              .overly {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: #000000;
+                opacity: 0.75;
+              }
+
 
         // mobile shoxruz
         // .mobile{
